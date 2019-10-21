@@ -23,9 +23,8 @@ function calculate(){
         let sum=1
         //for循环累乘
         for(let i=1;i<=n;++i){
-         sum*=2*i+1
-       
-    }
+            sum*=2*i+1
+     }
     //返回阶乘汇总数
     return sum
 }

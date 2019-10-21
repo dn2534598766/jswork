@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数组的排序</title>
+</head>
+<body>
+    <script>
+        var arr=[65,97,76,13,27,49,58]
+        var s=0
+        var s1=0
+        for(var i=0;i<arr.length-1;i++){
+            var isSort=true
+            for(var j=0;j<arr.length-1-i;j++){
+                if(arr[j]<arr[j+1]){
+                    isSort=false
+                    var tmp=arr[j]
+                    arr[j]=arr[j+1]
+                    arr[j+1]=tmp
+                }
+                s++
+            }
+            s1++
+            if(isSort){
+                break
+            }
+        }
+        document.write(arr+" 内循环"+s+"次，外循环"+s1+"次")
+    </script>
+</body>
+</html>

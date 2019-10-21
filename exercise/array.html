@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>二维数组求最大值跟最小值</title>
+</head>
+<body>
+    <script>
+       var arr=[
+           [24,26,28,29,24,25,26],
+           [13,25,28,22],
+           [24,246,27,28],
+       ]
+       var max=arr[0][0]
+       var min=arr[0][0]
+       var xbj
+       var xbi
+       var xbi2
+       var xbj2
+       for(var i=0;i<arr.length;i++){
+           for(var j=0;j<arr[i].length;j++){
+                if(max<=arr[i][j]){
+                    max=arr[i][j]
+                    xbi=i
+                    xbj=j
+                }
+                if(min>=arr[i][j]){
+                    min=arr[i][j]
+                    xbi2=i
+                    xbj2=j
+                    
+                }
+           }
+       }
+       document.write("该数组最大值为："+max+"，最小值为："+min)
+       document.write("最大值的下标为："+xbi+","+xbj+",最小值的下标为："+xbi2+","+xbj2)
+    </script>
+</body>
+</html>
