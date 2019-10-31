@@ -24,7 +24,7 @@ function monkey(){
 function stat(){
     let str=document.getElementById('str').value
     let obj={}
-    var array=str.split('')
+    var array=str.split('').sort()
     for(var i=0,l=str.length;i<l;i++){
         obj[str[i]]=(obj[str[i]]+1)||1
     }
