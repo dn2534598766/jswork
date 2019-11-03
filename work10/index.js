@@ -24,9 +24,10 @@ function monkey(){
 function stat(){
     let str=document.getElementById('str').value
     let obj={}
-    var array=str.split('').sort()
+    var array=str.split("")
+    array=array.sort()
     for(var i=0,l=str.length;i<l;i++){
-        obj[str[i]]=(obj[str[i]]+1)||1
+        obj[array[i]]=(obj[array[i]]+1)||1
     }
     document.getElementById('result').innerText=JSON.stringify(obj)
 }

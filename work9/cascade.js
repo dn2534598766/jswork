@@ -85,13 +85,13 @@ createOption(colleges,collegesArr)
 var majors=document.getElementById('majorSelect')
 colleges.onchange=function(){
     majors.options.length=0
-    createOption(majors,majorsArr[colleges.values])
+    createOption(majors,majorsArr[collegeSelect.values])
 }
 
 var classes=document.getElementById('classSelect')
-colleges.onchange=function(){
+majors.onchange=function(){
     classes.options.length=0
-    createOption(classes,classesArr[colleges.values][majors.value])
+    createOption(classes,classesArr[colleges.value][majors.value])
 }
 colleges.onchange=function(){
     majors.options.length=0
