@@ -9,7 +9,7 @@
             for(var n in this.data[k]){
                 item[n]=this.data[k][n];
             }
-            html+=FormBuilder.toHTML(item);
+            html+=builder.toHTML(item);
         }
         return '<table>'+html+'</table>';
     };
@@ -27,9 +27,27 @@
         },
         item:{
             input:function(attr,option){
-
-            
+                var html='';
+                if(option===null){
+                    html+='<input'+attr+'>';
+                }else{
+                    for(var k in option){
+                        html+='<label><input '+attr+'value="'+k+'"'+'>'+option[k]+'</label>';
+                    }
+                }
+                return html;
+            },
+            select:function(attr,option){
+                var html='';
+                for(var k in option){
+                    html+='<option value="'+k+'">'+option[k]+'</option>';
+                }
+                return '<select '+attr+'>'+html+'</select>';
+            },
+            textarea:function(attr){
+                return '<textarea'+attr+'></textarea>';
             }
         }
-    }
-})
+    };
+    window['FormBuilder']=FormBuilder;
+})(window);

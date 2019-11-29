@@ -1,24 +1,30 @@
-body{
+body {
     text-align: center;
 }
+
 .selyear{
     margin: 0 auto;
     width: 720px;
 }
-.preyear{
-    float:left;
+
+.preyear {
+    float: left;
 }
+
 .nextyear{
-    float:right;
+    float: right;
 }
+
 .box{
     margin: 0 auto;
     width: 720px;
 }
+
 .title{
-    background: #ccc;
+    background:  #ccc;
 }
-table{
+
+table { 
     height: 160px;
     width: 160px;
     font-size: 12px;
