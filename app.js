@@ -32,15 +32,15 @@ app.post('/ajax',function(req,res){
 })
 
 app.get('/ajax',function(req,res){
-    app.get('/ajax',function(req,res){
-        let page=req.query.page?Math.max(req.query.page,1):1
-        let size=5
-        let maxpage=Math.ceil(ajaxData.length/size)
-        result={data:ajaxData.slice((page-1)*size,page*size),
-            maxPage:maxpage
-        }
+    let page=req.query.page?Math.max(req.query.page,1):1
+    let size=5
+    let maxpage=Math.ceil(ajaxData.length/size)
+    result={data:ajaxData.slice((page-1)*size,page*size),
+        maxPage:maxpage
+    }
     res.json(result)
 })
+
 app.listen(8080,()=>console.log('node express 服务器已启动，监听端口:8080'))
 const openDefaultBrowser=function(url){
     var exec=require('child_process').exec;
