@@ -13,7 +13,7 @@ const multer=require('multer');
 var storage=multer.diskStorage({
 
     destination:function(req,file,cb){
-        cd(null,'../uploads')
+        cb(null,'../uploads')
     },
 
     filename:function(req,file,cb){
