@@ -8,7 +8,7 @@ document.getElementById('upload').onclick=function(){
     xhr.upload.onprogress=function(e){
         var num=Math.floor(e.loaded/e.total*100);
         bar.style.width=num+'%';
-        per.innerHTML=num+'%'；
+        per.innerHTML=num+'%';
     };
     xhr.onreadystatechange=function(){
         if(xhr.readyState===XMLHttpRequest.DONE){
