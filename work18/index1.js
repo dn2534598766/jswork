@@ -110,16 +110,12 @@
         next: document.getElementById('page_next'),
         last: document.getElementById('page_last'),
         pageNum: document.getElementById('page_num'),
-        onChange: function (){
-            comment.ajax('http://localhost:8080/ajax?page=' + this.page, function () {  
+        onChange:function(){
+             comment.ajax('http://139.9.81.203:8090/ajax?page=' + this.page, function () {  
                 progressBar = new ProgressBar(progressContainer);
                 progressBar.show();
-            },
-            // comment.ajax('http://139.9.81.203:8090/ajax?page=' + this.page, function () {  
-            //     progressBar = new ProgressBar(progressContainer);
-            //     progressBar.show();
-            // },
-            function (obj) {
+        
+        },function (obj) {
                 pageList.maxPage = obj.maxPage;
                 pageList.updateStatus();
                 comment.create(obj.data);
