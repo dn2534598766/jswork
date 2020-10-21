@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>给每个li加title</title>
+    <script type="text/javascript" src="../jquery.js"></script>
+    <script type="text/javascript">
+        $(function(){
+        $("#ul1 li").each(function(index){
+            this.title="我是第"+(index+1)+"个";//js语句
+        })
+        })
+    </script>
+</head>
+<body>
+    <ul id="ul1"> 
+        <li>li-1</li>
+        <li>li-2</li>
+        <li>li-3</li>
+        <li>li-4</li>
+        <li>li-5</li>
+    </ul>
+</body>
+</html>

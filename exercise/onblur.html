@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onblur事件</title>
+    <script>
+        function myFunction(){
+            var x=document.getElementById("humour");
+            x.value=x.value.toUpperCase();
+        }
+    </script>
+</head>
+<body>
+    请输入字母：<input type="text" id="humour" onblur="myFunction()"/>
+    <p>当你离开输入框, 函数将被触发将输入文字转换成大写。</p>
+</body>
+</html>

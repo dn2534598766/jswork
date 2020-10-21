@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p>普通列表</p>
+    <ul>
+        <li>炸酱面</li>
+        <li>刀削面</li>
+        <li>担担面</li>
+        <li>璪子面</li>
+    </ul>
+    <p>无样式列表</p>
+    <ul class="unstyled">
+        <li>炸酱面</li>
+        <li>刀削面</li>
+        <li>担担面</li>
+        <li>璪子面</li>
+    </ul>
+    <p>行内列表</p>
+    <ol class="list-inline">
+        <li><i><b>面</b></i></li>
+        <li class="list-inline-item text-warning">炸酱面</li>
+        <li class="list-inline-item text-primary">刀削面</li>
+        <li class="list-inline-item text-success">担担面</li>
+        <li class="list-inline-item text-info">噪子面</li>
+        <li><i><b>米</b></i></li>
+        <li class="list-inline-item text-danger">大米</li>
+        <li class="list-inline-item text-secondary">小米</li>
+        <li class="list-inline-item text-dark">黑米</li>
+        <li class="list-inline-item text-light">红米</li>
+    </ol>
+    <div class="container">
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <td class="bg-success">humour</td>
+                    <td class="bg-warning">Are you ok?</td>
+                    <td>I'm fine,thank you</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="bg-primary">万水千山总是情</td>
+                    <td class="bg-info">夫妻双双把家还</td>
+                    <td class="bg-danger">把复杂的生活过简单</td>
+                </tr>
+                <tr>
+                    <td>javascript</td>
+                    <td>python</td>
+                    <td>bootstrap</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="media">
+        <img class="svg_class" src="./image/0080EZXSgy1ggrtolzcz3j32t047i4qq.jpg" width="500px" height="700px"> 
+        <div class="media-body">
+            <h5>这是一朵向日葵</h5>
+            <p>首先你需要准备一个相机，然后调整好角度，把拍摄完的图片拿去调色跟调光，从而达到这样好看的效果</p>
+        </div>
+    </div>
+    <div class="media">
+        <div class="media-body">
+            <h5>这是一朵向日葵</h5>
+            <p>首先你需要准备一个相机，然后调整好角度，把拍摄完的图片拿去调色跟调光，从而达到这样好看的效果</p>
+        </div>
+        <img class="svg_class" src="./image/0080EZXSgy1ggrtolzcz3j32t047i4qq.jpg" width="500px">
+    </div>
+    <img class="img-thumbnail img-fluid" src="./image/0080EZXSgy1ggrtolzcz3j32t047i4qq.jpg" alt="???">
+    <img class="rounded-circle float-right" src="./image/0080EZXSgy1ggrtolzcz3j32t047i4qq.jpg" alt="???" height="100px">
+    <br/>
+    <br/>
+
+    <form action="" method="post">
+        <div id="" class="form-group">
+            <label for="name">姓名</label>
+            <input type="text" name="" id="name" value="" class="form-control">
+        </div>
+        <div id="" class="form-group">
+            <label for="password">密码</label>
+            <input type="password" name="" id="password" value="" class="form-control">
+        </div>
+        <div id="" class="form-group">
+            <label for="file">选择文件</label>
+            <input type="file" name="" id="file" value="">
+        </div>
+        <div id="" class="checkbox">
+            <input name="checkbox" type="checkbox">男
+            <input name="checkbox" type="checkbox">女
+        </div>
+        <div id="" class="form-group">
+            <input name="" type="submit" value="提交" class="form-control">
+        </div>
+    </form>
+    <div class="form-inline">
+        <div id="" class="form-group">
+            <label for="namne">姓名</label>
+            <input type="text" id="name" name="" value="" class="form-control">
+        </div>
+        <div id="" class="form-group">
+            <label for="password">密码</label>
+            <input type="password" id="password" name="" value="" class="form-control">
+        </div>
+        <div id="" class="form-group">
+            <input type="submit" id="" value="提交" name="" class="form-control">
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid">
+        <h1>Welcome to school!</h1>
+        <p>这里是你认识朋友的好地方</p>
+    </div>
+    <div class="alert alert-danger alert-dismissible fade show">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>错误!</strong>失败的操作
+    </div>
+    <div class="container">
+        <h1>以下是不同的按钮</h1>
+        <button type="button" class="btn btn-outline-success">成功按钮</button>
+        <button type="button" class="btn btn-outline-danger">失败按钮</button>
+        <button type="button" class="tbn btn-outline-info">信息</button>
+        <button type="button" class="btn btn-outline-warning">警告按钮</button>
+        <button type="button" class="btn btn-outline-light text-dark">浅色按钮</button>
+        <button type="button" class="btn btn-outline-dark">黑色按钮</button>
+        <button type="button" class="btn btn-outline-primary">主要按钮</button>
+        <button type="button" class="btn btn-outline-secondary">次要按钮</button>
+    </div>
+    <div style="height: 30px;"></div>
+    <br/>
+    <br/><br/><br/>
+    <!--<form role="form" class="form-horizontal">
+        <div id="" class="form-group">
+            <label for="name" class="col-sm-2 control-label">姓名</label>
+            <div class="col-sm-9">
+                <input type="text" id="name" name="" value="" class="form-control">
+            </div>
+        </div>
+        <div id="" class="form-group">
+            <label for="password" class="col-sm-2 control-label">密码</label>
+            <div class="col-sm-9">
+                <input type="password" id="password" name="" value="" class="form-control">
+            </div>
+        </div>
+        
+        <div id="" class="col-sm-offset-2 col-sm-9" >
+            <input type="submit" id="" name="" value="提交" class="btn btn-default">
+        </div>
+    </form>
+    -->
+</body>
+</html>

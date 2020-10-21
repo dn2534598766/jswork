@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跑马灯效果</title>
+    <script type="text/javascript" src="../jquery.js"></script>
+</head>
+<body>
+    <table style="height:520px;width:520px;margin: 0 auto;"border="1">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <div style="text-align:center">
+        <button id="btn1">奇数单元格</button>
+        <button id="btn2">偶数单元格</button>
+        <button id="btn3">奇数行</button>
+        <button id="btn4">偶数行</button>
+    </div>
+
+</body>
+<script type="text/javascript">
+    /*$('#btn1').click(function(){
+        var index=0;
+        var interval=setInterval(function(){
+            $('td').eq(index).css("background","red");
+            index+=2;
+        },1000);
+    })
+    $('#btn2').click(function(){
+        var index1=1;
+        var interval2=setInterval(function(){
+            $('td').eq(index1).css("background","red");
+            index1+=2;
+        },1000);
+    })*/
+    var btn1=document.getElementById("btn1");
+    var btn2=document.getElementById("btn2");
+    var tdList=document.getElementsByTagName("td");
+    var index=0;
+    var index1=1;
+    btn1.onclick=function(){
+        intetval=setInterval(function(){
+            tdList[index].style.background="red";
+            index=index+2;
+        },1000);
+    }
+    btn2.onclick=function(){
+        intetval=setInterval(function(){
+            tdList[index1].style.background="red";
+            index1=index1+2;
+        },1000);
+    }
+</script>
+</html>

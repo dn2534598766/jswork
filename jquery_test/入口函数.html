@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="./jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+            $(document).ready(function(){
+                $("input[name='humour']").focus(function(){
+                    $(this).css("background-color","red");
+                });
+                $("input[name='humour']").blur(function(){
+                    $(this).css("background-color","blue");
+                });
+                $(window).keydown( function(event){
+                    console.log(event);
+                } );
+            });
+    </script>
+    <style>
+        h1{
+            text-align: center;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello world!</h1>
+    姓名：<input type="text" name="humour">
+</body>
+</html>

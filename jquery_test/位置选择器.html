@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>位置选择器</title>
+    <script type="text/javascript" src="../jquery.js"></script>
+</head>
+<body>
+    <a href="http://www.baidu.com">BAIDU</a>
+    <a href="a.php">A</a>
+    <a href="b.html">B</a>
+    <a href="c.php">C</a>
+    <a href="http://www.qq.com">QQ</a>
+</body>
+</html>
+<script type="text/javascript">
+//$("a:first").css("border","1px solid red");
+//$("a:last").css("border","1px solid red");
+//找奇数位，默认从0开始
+//$("a:odd").css("border","1px solid red");
+//找偶数位
+//$("a:even").css("border","1px solid red");
+//eq(n)表示第n+1个
+//$("a:eq(1)").css("border","1px solid red");
+//gt(n)表示第n+1个之后的所有
+//$("a:gt(1)").css("border","1px solid red");
+//lt(n)表示第n+1个前的所有
+$("a:lt(1)").css("border","1px solid red");
+</script>

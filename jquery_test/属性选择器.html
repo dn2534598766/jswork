@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择器</title>
+</head>
+<script type="text/javascript" src="./jquery-3.4.1.min.js"></script>
+<body>
+    <a href="http://baidu.com">baidu</a>
+    <a href="a.php">a</a>
+    <a href="b.js">b</a>
+    <a href="httpc.css">c</a>
+</body>
+<script type="text/javascript">
+    //$("[href='a.php']").css("border","1px solid red");
+    //$("[href*='a']").css("border","1px solid black");
+    //$("[href^='http']").css("border","1px solid red");
+    $("[href$='js']").css("border","1px solid red");
+</script>
+</html>

@@ -116,4 +116,18 @@ function geturl(){
             'Cookie':cookie,
         }
     }
+    https.get(someurl,opt,(res)=>{
+        let chunks=[]
+        res.on('data',(chunk)=>{
+            chunk.push(chunk)
+        })
+        res.on('end',()=>{
+            let buffer=Buffer.concat(chunks)
+            let str=iconv.decode(buffer,'gbk')
+            let $=cheerio.load(str)
+            $('#DataGrid1>tbody>tr>td:nth-child(3)').map(function(el){
+                console.log($(this).text())
+            })
+        })
+    })
 }

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择器对象</title>
+    <script type="text/javascript" src="../jquery.js"></script>
+</head>
+<body>
+    <p class="c1">P-1</p>
+    <p class="c1" id="p2">
+        <a href="" id="a1">a1</a>
+        <a href="">a2</a>
+    </p>
+    <p class="c2" id="p3">P-3</p>
+</body>
+</html>
+<script type="text/javascript">
+//选择器对象里放的是节点对象
+/*$(".c1").each(function(index){
+    alert(this);
+})//选择器对象中放的节点对象
+$(".c1")[0].style.border="1px solid red";//通过0下标读取的是节点对象
+*/
+$(".c1").find("#a1").css('border', '1px solid red');
+//$(".c1").not("#p2").css('border','1px solid red');
+//$(".c1").add(".c2").css('border','1px solid red');
+</script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子代选择器</title>
+    <script type="text/javascript" src="../jquery.js"></script>
+</head>
+<body>
+    <ul id="ul1">
+        <li>Li-1</li>
+        <li>Li-2</li>
+        <li>Li-3
+            <ul>
+                <li>Li-3-1</li>
+                <li>Li-3-2</li>
+                <li>Li-3-3</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
+<script type="text/javascript">
+    $("#ul1>li").css("border","1px solid blue")
+</script>

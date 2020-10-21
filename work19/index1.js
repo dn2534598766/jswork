@@ -1,4 +1,4 @@
-document.getElementById('upload').onclick = function (){
+document.getElementById('upload').onclick=function () {
     var form = document.getElementById('form');
     var fd = new FormData(form);
     var bar = document.getElementById('bar');
@@ -10,20 +10,20 @@ document.getElementById('upload').onclick = function (){
         bar.style.width = num + '%';
         per.innerHTML = num + '%';
     };
-    xhr.onreadystatechange = function(){
-        if(xhr.readyState === XMLHttpRequest.DONE){
-            if(xhr.status < 200 || xhr.status >= 300 && xhr.status !== 304){
-                throw new Error('文件上传失败，服务器状态异常。');
+    xhr.onreadystatechange =function () {
+        if (xhr.readyState === XMLHttpRequest.DONE){
+            if(xhr.status<200 || xhr.status >=300 && xhr.status !==304){
+                throw new Error('文件上传失败');
             }
             var name = xhr.responseText;
-            if(name == ''){
-                throw new Error('服务器保存文件失败。');
+            if (name == ''){
+                throw new Error('服务器保存文件失败');
             }
-            let reg = /^http(s)?:\/\/(.*?)\//;
-            let downurl = xhr.responseURL.match(reg)[0] + name.slice(2,name.length - 1);
-            down.innerHTML = `文件上传成功。<a href=${downurl}>下载文件${downurl}</a>`
+            let reg=/^http(s)?:\/\/(.*?)\//
+            let downurl = xhr.responseURL.match(reg)[0]+name.slice(2,name.length-1)
+            down.innerHTML = `文件上传成功。<a href=${downurl}>下载文件${downurl}</a>`;
         }
     };
-    xhr.open('POST', 'http://localhost:8080/upload');
+    xhr.open('POST','http://localhost:8080/upload');
     xhr.send(fd);
 };
